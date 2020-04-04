@@ -4,8 +4,8 @@
 // https://en.cppreference.com/w/cpp/language/class_template
 //extern template <typename T> struct FooT {
 template <typename T> struct FooT {
-    FooT()  { printf ("C %zu", sizeof (T)); }
-    ~FooT() { printf ("D %zu", sizeof (T));}
+    FooT() __attribute__((noinline)) { printf ("C %zu", sizeof (T)); }
+    ~FooT() __attribute__((noinline)) { printf ("D %zu", sizeof (T));}
 };
 
 // don't duplicate these:
