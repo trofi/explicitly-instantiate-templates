@@ -4,3 +4,7 @@
 
 template struct FooT<int>;
 template struct FooT<long>;
+
+void f() {
+    FooT<char> fc;
+}
